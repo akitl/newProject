@@ -13,15 +13,12 @@ Animal::Animal(int age,string nom): m_age(age), m_nom(nom)
 
 }
 
-Animal::Animal(Animal const& animalAcopier): age(animalAcopier.age), m_nom(animalAcopier.m_nom)
+Animal::Animal(Animal const& animalAcopier): m_age(animalAcopier.m_age), m_nom(animalAcopier.m_nom)
 {
- m_humain = new Humain(*(animalAcopier.m_humain));
+ //m_humain = new Humain(*(animalAcopier.m_humain));
+ cout << "copié" << endl;
 }
 
-Animal::Animal(Animal const animalAcopier): m_age(animalAcopier.m_age), m_nom(animalAcopier.m_nom)
-{
- m_humain = new Humain(*(animalAcopier.m_humain));
-}
 
 
 
@@ -55,5 +52,5 @@ bool operator==(Animal const& a, Animal const& b)
 
 Animal::~Animal()
 {
-    delete m_humain; 
+    //delete m_humain; 
 }

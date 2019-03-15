@@ -10,7 +10,6 @@ class Animal
 public:
     Animal();
     Animal(int age,string nom);
-    Animal(Animal const animalAcopier);
     Animal(Animal const& animalAcopier);
     ~Animal();
 
@@ -27,7 +26,7 @@ public:
 private:
     int m_age;
     string m_nom;
-    Humain * m_humain;
+    //Humain * m_humain;
 
     
 };
