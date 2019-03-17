@@ -2,8 +2,8 @@ CC=g++
 CFLAGS=-W -Wall
 LDFLAGS=
 EXEC=main
-SRC= $(wildcard *.cpp)
-HFILE= $(wildcard *.h)
+SRC= $(wildcard *.cpp) $(wildcard lib/*.cpp)
+HFILE= $(wildcard lib/*.h)
 OBJ= $(SRC:.cpp=.o)
 
 all: $(EXEC)

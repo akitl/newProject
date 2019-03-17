@@ -13,7 +13,7 @@ public:
     Animal(Animal const& animalAcopier);
     ~Animal();
 
-    void cri() const;
+    virtual void cri() const;
 
     int getAge();
     void setAge(int age);
@@ -23,7 +23,7 @@ public:
 
     friend bool operator==(Animal const& a, Animal const& b);
 
-private:
+protected:
     int m_age;
     string m_nom;
     //Humain * m_humain;

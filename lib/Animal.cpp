@@ -16,7 +16,6 @@ Animal::Animal(int age,string nom): m_age(age), m_nom(nom)
 Animal::Animal(Animal const& animalAcopier): m_age(animalAcopier.m_age), m_nom(animalAcopier.m_nom)
 {
  //m_humain = new Humain(*(animalAcopier.m_humain));
- cout << "copié" << endl;
 }
 
 

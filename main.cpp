@@ -1,12 +1,21 @@
-#include "Animal.h"
+#include "lib/Animal.h"
+#include "lib/Chien.h"
 #include <iostream>
 
 using namespace std;
 
+void crier(Animal const &   a){
+    a.cri();
+}
+
 int main (void)
 {
-Animal a;
+Chien a;
 Animal b(8,"rex");
-cout << a.getAge() << endl;
-cout << b.getAge() << endl;
+a.cri() ;
+b.cri() ;
+
+crier(a);
+crier(b);
+
 }
