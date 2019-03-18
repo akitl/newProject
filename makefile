@@ -20,5 +20,6 @@ main.o: $(HFILE)
 
 clean:
 	rm -rf *.o
+	rm -rf lib/*.o
 mrproper: clean
 	rm -rf $(EXEC)

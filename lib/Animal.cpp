@@ -5,25 +5,31 @@ using namespace std;
 
 Animal::Animal(): m_age(5), m_nom("bob")
 {
-
+++compteur;
 }
 
 Animal::Animal(int age,string nom): m_age(age), m_nom(nom)
 {
-
+++compteur;
 }
 
 Animal::Animal(Animal const& animalAcopier): m_age(animalAcopier.m_age), m_nom(animalAcopier.m_nom)
 {
- //m_humain = new Humain(*(animalAcopier.m_humain));
+ ++compteur;
 }
 
-
+bool Animal::isMoveable(){
+    return true;
+}
 
 
 void Animal::cri()const
 {
-    cout << "oups" << endl;
+    cout << compteur << endl;
+}
+
+void Animal::nbAnimal(){
+    cout << compteur << endl;
 }
 
 int Animal::getAge(){
@@ -51,5 +57,5 @@ bool operator==(Animal const& a, Animal const& b)
 
 Animal::~Animal()
 {
-    //delete m_humain; 
+    --compteur;
 }

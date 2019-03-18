@@ -2,10 +2,11 @@
 #define CHIEN_H_
 #include <string>
 #include "Animal.h"
+#include "Canin.h"
 
 using namespace std;
 
-class Chien : public Animal
+class Chien : public Animal , public Canin
 {
 
 public:
@@ -15,13 +16,10 @@ public:
 
     void cri() const;
 
-    string getRace();
-    void setRace(string race);
-
     void chercherLaBaballe();
 
 private:
-string m_race;
+
 
 };
 
